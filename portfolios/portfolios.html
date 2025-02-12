@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creativa</title>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="../css/easy.css">
+<link rel="stylesheet" href="../css/slick.min.css">
+<link rel="stylesheet" href="portfoliostyle.css">
+<link rel="shortcut icon" href="../Images/fav_icon.png" type="image/x-icon">
+
+<!-- font awesome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<!-- preloader -->
+<style>
+    .loading-gif {
+        max-width: 500px;
+    }
+
+    .pre-loader {
+        position: fixed;
+        z-index: 100;
+        /** make sure this is the highest value compared to all other divs **/
+        top: 0;
+        left: 0;
+        background-color: rgb(17 17 17);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .pre-loader.hidden {
+        animation: fadeOut 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeOut {
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+</style>
+<!-- preloader finish -->
+
+
+</head>
+
+<body>
+
+    <!--- Preloader -->
+    <div class='pre-loader'>
+        <img class='loading-gif' alt='loading' src="../Images/preloader.gif" />
+    </div>
+
+    <!-- js to hide preloader loading is done -->
+    <script type='text/javascript'>
+        window.addEventListener('load', function () {
+            document.querySelector('.pre-loader').className += ' hidden';
+        });
+    </script>
+
+    <!--- Preloader finish -->
+
+    <div class="site-wrapper">
+        <div class="header-index">
+            <!-- ====== 1.1. Header section ====== -->
+            <header>
+                <nav class="container navbar">
+                    <div class="container-nav flex">
+                        <!-- site logo -->
+                        <a class="navbar-logo" href="/"><img class="headerimg" src="../Images/logo.png" alt="logo"></a>
+                        <button class="navbar-toggler" onclick="openNav()" type="button">
+                            <span class="fa-solid fa-bars"></span>
+                        </button>
+                        <!-- menus -->
+                        <ul class="navbar-nav flex">
+                            <li><a class="nav-link active" href="../index.html">Home</a></li>
+                            <li><a class="nav-link" href="comingsoon.html">About</a></li>
+                            <li><a class="nav-link" href="../contact-us/ContactSection.html">Contact</a></li>
+                            <li class="dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#serv">Services</a></li>
+                                    <li><a class="dropdown-item" href="#prices">Pricing Plan</a></li>
+                                    <li><a class="dropdown-item" href="#proto">Portfolio</a></li>
+                                    <li><a class="dropdown-item" href="#teamm1">Team</a></li>
+                                    <li><a class="dropdown-item" href="comingsoon.html">Testimonials</a></li>
+                                    <li><a class="dropdown-item" href="#faqq">FAQ</a></li>
+                                    <li><a class="dropdown-item" href="404errorpage/404.html">404</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex nav-right">
+                        <p>Call Us: <span>+966568920658</span></p>
+                    </div>
+                </nav>
+                <!-- Sidebar -->
+                <aside id="mySidepanel" class="sidepanel">
+                    <div class="sidebar flex">
+                        <a href="index.html "><img src="../Images/logo.png" alt="logo"></a>
+                        <button class="closebtn btn_hover1" onclick="closeNav()"><i
+                                class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div>
+                        <!-- side menus -->
+                        <ul>
+                            <li><a class="nav-link active" href="../index.html">Home</a></li>
+                            <li><a class="nav-link" href="about.html">About</a></li>
+                            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+                            <li class="pages"><a href="#">More</a></li>
+                            <li class="collapse_btn">
+                                <a class="nav-link plus_collapse" data-bs-toggle="collapse" href="javascript:void(0);"
+                                    onclick="toggleCollapse('pages')" aria-expanded="false" aria-controls="pages">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                                <div class="collapse" id="pages">
+                                    <ul>
+                                        <li><a class="nav-link" href="#serv">Services</a></li>
+                                        <li><a class="nav-link" href="#prices">Pricing Plan</a></li>
+                                        <li><a class="nav-link" href="#proto">Portfolio</a></li>
+                                        <li><a class="nav-link" href="#teamm1">Team</a></li>
+                                        <li><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                                        <li><a class="nav-link" href="#faqq">FAQ</a></li>
+                                        <li><a class="nav-link" href="404errorpage/404.html">404</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Right Sidebar -->
+                <section class="header-right-sidebar" id="right_side">
+                    <div class="flex flex-sb">
+                        <a href="#"><img src="../Images/logo.png" alt="logo"></a>
+                        <button class="close_right_sidebar fa-solid fa-xmark" onclick="close_right_sade()"> </button>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <a href="../contact-us/ContactSection.html" class="btn_hover1">Discover More</a>
+                    <hr>
+                    <h4>Connected details:</h4>
+                    <ul class="flex">
+                        <li>
+                            <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                            <a href="#" class="text-lowercase">Yourname@Email.Com</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa-regular fa-envelope"></i></a>
+                            <a href="#">+123-456-7890</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa-sharp fa-regular fa-clock"></i></a>
+                            <a href="#">Office Hours: 8AM - 11PM Sunday -
+                                Weekend Day</a>
+                        </li>
+                    </ul>
+                    <span class="flex">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </span>
+                </section>
+            </header>
+        </div>
+
+        <!-- our service -->
+
+        <section class="author-archive">
+            <div class="container">
+                <h1>Some of my <a href="https://tutsplus.com/authors/george-martsoukos" target="_blank">Tuts+
+                        Tutorials</a>
+                </h1>
+                <input type="radio" id="All" name="categories" value="All" checked>
+                <input type="radio" id="CSS" name="categories" value="CSS">
+                <input type="radio" id="JavaScript" name="categories" value="JavaScript">
+                <input type="radio" id="jQuery" name="categories" value="jQuery">
+                <input type="radio" id="WordPress" name="categories" value="WordPress">
+                <input type="radio" id="Slider" name="categories" value="Slider">
+                <input type="radio" id="fullPage.js" name="categories" value="fullPage.js">
+
+                <ol class="filters">
+                    <li>
+                        <label for="All">All</label>
+                    </li>
+                    <li>
+                        <label for="CSS">CSS</label>
+                    </li>
+                    <li>
+                        <label for="JavaScript">JavaScript</label>
+                    </li>
+                    <li>
+                        <label for="jQuery">jQuery</label>
+                    </li>
+                    <li>
+                        <label for="WordPress">WordPress</label>
+                    </li>
+                    <li>
+                        <label for="Slider">Slider</label>
+                    </li>
+                    <li>
+                        <label for="fullPage.js">fullPage.js</label>
+                    </li>
+                </ol>
+
+                <ol class="posts">
+                    <li class="post" data-category="CSS JavaScript">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-build-a-dead-simple-parallax-effect-with-css-javascript--cms-33061?_ga=2.146015156.1249101154.1555312171-2126893531.1553152868"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/parallax-pre.jpg"
+                                        alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">CSS</a>
+                                        </li>
+                                        <li>
+                                            <a href="">JavaScript</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-build-a-dead-simple-parallax-effect-with-css-javascript--cms-33061?_ga=2.146015156.1249101154.1555312171-2126893531.1553152868"
+                                            target="_blank">Quick Tip: Create a Very Simple Parallax Effect With CSS &
+                                            JavaScript
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="CSS JavaScript">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-portfolio-page-with-css-javascript--cms-32933?_ga=2.268974834.267848227.1555345574-242901505.1471790948"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/chart-pre.png" alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">CSS</a>
+                                        </li>
+                                        <li>
+                                            <a href="">JavaScript</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-portfolio-page-with-css-javascript--cms-32933?_ga=2.268974834.267848227.1555345574-242901505.1471790948"
+                                            target="_blank">How to Build a Static Portfolio Page With CSS & JavaScript
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="JavaScript WordPress">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load-on-a-wordpress-site--cms-32211?_ga=2.3551667.267848227.1555345574-242901505.1471790948"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/pre-wp.png" alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">JavaScript</a>
+                                        </li>
+                                        <li>
+                                            <a href="">WordPress</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load-on-a-wordpress-site--cms-32211?_ga=2.3551667.267848227.1555345574-242901505.1471790948"
+                                            target="_blank">Dropdown Navigation: How to Maintain the Selected Option On
+                                            WordPress
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="CSS JavaScript">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load--cms-32210?_ga=2.192885033.267848227.1555345574-242901505.1471790948"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/load-pre.png" alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">CSS</a>
+                                        </li>
+                                        <li>
+                                            <a href="">JavaScript</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load--cms-32210?_ga=2.192885033.267848227.1555345574-242901505.1471790948"
+                                            target="_blank">Dropdown Navigation: How to Maintain the Selected Option on
+                                            Page
+                                            Load
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="CSS">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-enhance-a-page-with-css-animations--cms-32100?_ga=2.3551667.267848227.1555345574-242901505.1471790948"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/animations-pre.png"
+                                        alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">CSS</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-enhance-a-page-with-css-animations--cms-32100?_ga=2.3551667.267848227.1555345574-242901505.1471790948"
+                                            target="_blank">Enhance the Way a Web Page Loads With CSS Animations
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="CSS">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-full-screen-responsive-page-with-flexbox--cms-32086?_ga=2.225771033.267848227.1555345574-242901505.1471790948"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/flex-pre.png" alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">CSS</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-full-screen-responsive-page-with-flexbox--cms-32086?_ga=2.225771033.267848227.1555345574-242901505.1471790948"
+                                            target="_blank">How to Build a Full-Screen Responsive Page With Flexbox</a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="fullPage.js">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/how-to-create-an-animated-spirit-day-presentation-with-fullpagejs--cms-32005?_ga=2.171060384.1249101154.1555312171-2126893531.1553152868"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/spirit-pre.jpg"
+                                        alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">fullPage.js</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/how-to-create-an-animated-spirit-day-presentation-with-fullpagejs--cms-32005?_ga=2.171060384.1249101154.1555312171-2126893531.1553152868"
+                                            target="_blank">How to Create an Animated Spirit Day Presentation With
+                                            fullPage.js
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="CSS JavaScript">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-manipulate-cursor-appearance-with-css--cms-31825?_ga=2.149104566.1249101154.1555312171-2126893531.1553152868"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/cursor-pre.jpg"
+                                        alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">CSS</a>
+                                        </li>
+                                        <li>
+                                            <a href="">JavaScript</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-manipulate-cursor-appearance-with-css--cms-31825?_ga=2.149104566.1249101154.1555312171-2126893531.1553152868"
+                                            target="_blank">Quick Tip: How to Manipulate the Cursor Appearance With CSS
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="jQuery CSS Slider">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-full-screen-responsive-carousel-slider-with-owljs--cms-31771?_ga=2.214527703.1129106392.1555690352-242901505.1471790948"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/pre-oo.png" alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">jQuery</a>
+                                        </li>
+                                        <li>
+                                            <a href="">CSS</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Slider</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-a-full-screen-responsive-carousel-slider-with-owljs--cms-31771?_ga=2.214527703.1129106392.1555690352-242901505.1471790948"
+                                            target="_blank">How to Build a Full-Screen Responsive Carousel Slider With
+                                            Owl.js
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="jQuery CSS Slider">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-an-attractive-responsive-image-gallery-with-slickjs--cms-31355?_ga=2.245039813.1129106392.1555690352-242901505.1471790948"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/slick-pre.png" alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">jQuery</a>
+                                        </li>
+                                        <li>
+                                            <a href="">CSS</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Slider</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/how-to-build-an-attractive-responsive-image-gallery-with-slickjs--cms-31355?_ga=2.245039813.1129106392.1555690352-242901505.1471790948"
+                                            target="_blank">How to Build an Attractive Responsive Image Gallery With
+                                            slick.js
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="CSS JavaScript">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/a-simple-javascript-technique-for-filling-star-ratings--cms-29450?_ga=2.239800003.1129106392.1555690352-242901505.1471790948"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/stars-pre.png" alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">CSS</a>
+                                        </li>
+                                        <li>
+                                            <a href="">JavaScript</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/a-simple-javascript-technique-for-filling-star-ratings--cms-29450?_ga=2.239800003.1129106392.1555690352-242901505.1471790948"
+                                            target="_blank">A Simple JavaScript Technique for Filling Star Ratings
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="post" data-category="jQuery fullPage.js">
+                        <article>
+                            <figure>
+                                <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-scroll-animations-with-fullpagejs-and-animatecss--cms-25235?_ga=2.245041733.1129106392.1555690352-242901505.1471790948"
+                                    target="_blank">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/scroll-preview.jpg"
+                                        alt="">
+                                </a>
+                                <figcaption>
+                                    <ol class="post-categories">
+                                        <li>
+                                            <a href="">jQuery</a>
+                                        </li>
+                                        <li>
+                                            <a href="">fullPage.js</a>
+                                        </li>
+                                    </ol>
+                                    <h2 class="post-title">
+                                        <a href="https://webdesign.tutsplus.com/tutorials/quick-tip-scroll-animations-with-fullpagejs-and-animatecss--cms-25235?_ga=2.245041733.1129106392.1555690352-242901505.1471790948"
+                                            target="_blank">Quick Tip: Scroll Animations With fullPage.js and
+                                            Animate.css
+                                        </a>
+                                    </h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+
+
+        <!-- ====== 1.15. Footer section ====== -->
+        <footer>
+            <div class="container">
+                <form id="footer-form" class="flex flex-sb gap-2" data-aos="zoom-in" data-aos-delay="400">
+                    <div id="footer-message"></div>
+                    <input type="email" required placeholder="Enter your mail">
+                    <button type="submit" class="btn_hover1">Get Started</button>
+                </form>
+            </div>
+            <div class="footer-menu">
+                <div class="container">
+                    <div class="flex flex-start footer-center">
+                        <div class="w-33 flex flex-col gap-2 flex-start">
+                            <a href="../index.html"><img src="../Images/logo.png" alt="footer-logo"></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.
+                            </p>
+                            <span class="flex gap-2">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            </span>
+                        </div>
+                        <div class="w-16 mt-1">
+                            <h4>Quick Links</h4>
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-16 mt-45 flex-end">
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-33 mt-1 flex flex-col flex-start">
+                            <h4>Get Connected</h4>
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li>
+                                    <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                                    <a href="#" class="text-lowercase">Yourname@Email.Com</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa-regular fa-envelope"></i></a>
+                                    <a href="#">+123-456-7890</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa-sharp fa-regular fa-clock"></i></a>
+                                    <a href="#">Office Hours: 8AM - 11PM
+                                        Sunday - Weekend Day</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container flex flex-sb gap-2 flex-wrap">
+                    <h6>Copyright © 2025 <a href="../index.html" class="p-0"> Creativa. </a> All Rights Reserved .
+                    </h6>
+                </div>
+            </div>
+        </footer>

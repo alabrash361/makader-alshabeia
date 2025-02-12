@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- *******  Link To CSS Style Sheet  ******* -->
+	<link rel="stylesheet" type="text/css" href="contactstyle.css">
+
+	<!-- *******  Font Awesome Icons Link  ******* -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+	<!-- *******  Link To Goggle Fonts  *******  -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap"
+		rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Contact Section</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="../css/easy.css">
+<link rel="stylesheet" href="../css/slick.min.css">
+<link rel="stylesheet" href="service.css">
+<link rel="shortcut icon" href="../Images/fav_icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+	<div class="site-wrapper">
+		<div class="header-index">
+		  <!-- ====== 1.1. Header section ====== -->
+		  <header>
+			<nav class="container1 navbar">
+			  <div class="container-nav flex">
+				<!-- site logo -->
+				<a class="navbar-logo" href="/"><img class="headerimg" src="../Images/logo.png" alt="logo"></a>
+				
+				<!-- menus -->
+				<ul class="navbar-nav flex">
+				  <li><a class="nav-link active" href="../index.html">Home</a></li>
+				  <li><a class="nav-link" href="comingsoon.html">About</a></li>
+				  <li><a class="nav-link" href="../contact-us/ContactSection.html">Contact</a></li>
+				  <li class="dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+					  data-bs-toggle="dropdown" aria-expanded="false">
+					  Pages
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+					  <li><a class="dropdown-item" href="#serv">Services</a></li>
+					  <li><a class="dropdown-item" href="#prices">Pricing Plan</a></li>
+					  <li><a class="dropdown-item" href="#proto">Portfolio</a></li>
+					  <li><a class="dropdown-item" href="#teamm1">Team</a></li>
+					  <li><a class="dropdown-item" href="comingsoon.html">Testimonials</a></li>
+					  <li><a class="dropdown-item" href="#faqq">FAQ</a></li>
+					  <li><a class="dropdown-item" href="404errorpage/404.html">404</a></li>
+					</ul>
+				  </li>
+				</ul>
+			  </div>
+	
+			  <div class="flex nav-right">
+				<p>Call Us: <span>+966568920658</span></p>
+			  </div>
+			</nav>
+			<!-- Sidebar -->
+			<aside id="mySidepanel" class="sidepanel">
+			  <div class="sidebar flex">
+				<a href="index.html "><img src="../Images/logo.png" alt="logo"></a>
+				<button class="closebtn btn_hover1" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
+			  </div>
+			  <div>
+				<!-- side menus -->
+				<ul>
+				  <li><a class="nav-link active" href="../index.html">Home</a></li>
+				  <li><a class="nav-link" href="about.html">About</a></li>
+				  <li><a class="nav-link" href="../contact.html">Contact</a></li>
+				  <li class="pages"><a href="#">More</a></li>
+				  <li class="collapse_btn">
+					<a class="nav-link plus_collapse" data-bs-toggle="collapse" href="javascript:void(0);"
+					  onclick="toggleCollapse('pages')" aria-expanded="false" aria-controls="pages">
+					  <i class="fa-solid fa-plus"></i>
+					</a>
+					<div class="collapse" id="pages">
+					  <ul>
+						<li><a class="nav-link" href="#serv">Services</a></li>
+						<li><a class="nav-link" href="#prices">Pricing Plan</a></li>
+						<li><a class="nav-link" href="#proto">Portfolio</a></li>
+						<li><a class="nav-link" href="#teamm1">Team</a></li>
+						<li><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+						<li><a class="nav-link" href="#faqq">FAQ</a></li>
+						<li><a class="nav-link" href="404errorpage/404.html">404</a></li>
+					  </ul>
+					</div>
+				  </li>
+				</ul>
+			  </div>
+			</aside>
+	
+			<!-- Right Sidebar -->
+			<section class="header-right-sidebar" id="right_side">
+			  <div class="flex flex-sb">
+				<a href="#"><img src="../Images/logo.png" alt="logo"></a>
+				<button class="close_right_sidebar fa-solid fa-xmark" onclick="close_right_sade()"> </button>
+			  </div>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+				labore et dolore magna aliqua.
+			  </p>
+			  <a href="../contact-us/ContactSection.html" class="btn_hover1">Discover More</a>
+			  <hr>
+			  <h4>Connected details:</h4>
+			  <ul class="flex">
+				<li>
+				  <a href="#"> <i class="fa-solid fa-phone"></i></a>
+				  <a href="#" class="text-lowercase">Yourname@Email.Com</a>
+				</li>
+				<li>
+				  <a href="#"> <i class="fa-regular fa-envelope"></i></a>
+				  <a href="#">+123-456-7890</a>
+				</li>
+				<li>
+				  <a href="#"> <i class="fa-sharp fa-regular fa-clock"></i></a>
+				  <a href="#">Office Hours: 8AM - 11PM Sunday -
+					Weekend Day</a>
+				</li>
+			  </ul>
+			  <span class="flex">
+				<a href="#"><i class="fa-brands fa-facebook"></i></a>
+				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+			  </span>
+			</section>
+		  </header>
+		</div>
+
+
+
+	<div class="container">
+		<main class="row">
+
+			<!--  *******   Left Section (Column) Starts   *******  -->
+
+			<section class="col left">
+
+				<!--  *******   Title Starts   *******  -->
+
+				<div class="contactTitle">
+					<h2>Get In Touch</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+				</div>
+
+				<!--  *******   Title Ends   *******  -->
+
+				<!--  *******   Contact Info Starts   *******  -->
+
+				<div class="contactInfo">
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+						<div class="details">
+							<span>Phone</span>
+							<span>+00 110 111 00</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-envelope"></i>
+						</div>
+						<div class="details">
+							<span>Email</span>
+							<span>name.tutorial@gmail.com</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<div class="details">
+							<span>Location</span>
+							<span>X Street, Y Road, San Fransisco</span>
+						</div>
+					</div>
+
+				</div>
+
+				<!--  *******   Contact Info Ends   *******  -->
+
+				<!--  *******   Social Media Starts   *******  -->
+
+				<div class="socialMedia">
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-twitter"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
+
+				<!--  *******   Social Media Ends   *******  -->
+
+			</section>
+
+			<!--  *******   Left Section (Column) Ends   *******  -->
+
+			<!--  *******   Right Section (Column) Starts   *******  -->
+
+			<section class="col right">
+
+				<!--  *******   Form Starts   *******  -->
+
+				<form class="messageForm">
+
+					<div class="inputGroup halfWidth">
+						<input type="text" name="" required="required">
+						<label>Your Name</label>
+					</div>
+
+					<div class="inputGroup halfWidth">
+						<input type="email" name="" required="required">
+						<label>Email</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<input type="text" name="" required="required">
+						<label>Subject</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<textarea required="required"></textarea>
+						<label>Say Something</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<button>Send Message</button>
+					</div>
+
+				</form>
+
+				<!--  *******   Form Ends   *******  -->
+			</section>
+
+			<!--  *******   Right Section (Column) Ends   *******  -->
+
+		</main>
+	</div>
+
+
+
+
+	<script src="contacjs.js"></script>
+
+</body>
+
+</html>
